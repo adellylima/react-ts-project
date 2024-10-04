@@ -27,13 +27,13 @@ const CardContainer = styled.div`
 
 const CardTitle = styled.h3`
   margin: 0;
-  font-size: 1.5em;
+  font-size: 18px;
   color: #333;
 `;
 
 const CardSubject = styled.p`
   margin: 10px 0;
-  font-size: 1em;
+  font-size: 14px;
   color: #666;
 `;
 

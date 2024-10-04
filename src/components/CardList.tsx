@@ -58,7 +58,7 @@ interface CardData {
 
 const CardList: React.FC = () => {
   const [cards, setCards] = useState<CardData[]>([]);
-  const [page, setPage] = useState(0); // Começa em 0 para a primeira página
+  const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const itemsPerPage = 10;
 
