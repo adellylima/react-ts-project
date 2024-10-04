@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import Sidebar from "./components/Sidebar";
-import CardsList from "./components/CardList";
-import Footer from "./components/Footer";
+import React from 'react';
+import styled from 'styled-components';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
+import CardsList from './components/CardList';
 
 const AppContainer = styled.div`
   display: flex;
@@ -10,21 +10,28 @@ const AppContainer = styled.div`
   height: 100vh;
 `;
 
-const MainContent = styled.main`
+const ContentContainer = styled.div`
+  display: flex;
   flex-grow: 1;
   padding: 20px;
+`;
+
+const MainContent = styled.main`
+  flex-grow: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const App: React.FC = () => {
   return (
     <AppContainer>
-      <Sidebar />
-      <MainContent>
-        <CardsList />
-      </MainContent>
+      <ContentContainer>
+        <Sidebar />
+        <MainContent>
+          <CardsList />
+        </MainContent>
+      </ContentContainer>
       <Footer />
     </AppContainer>
   );

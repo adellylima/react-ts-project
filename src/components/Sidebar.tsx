@@ -2,10 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SidebarContainer = styled.aside`
-  width: 200px;
+  width: 250px;  
   padding: 20px;
   background-color: #f4f4f4;
-  border-right: 1px solid #ddd;
   display: flex;
   flex-direction: column;
   align-items: center;
