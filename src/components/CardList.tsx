@@ -1,5 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import Card from './Card';
+
+interface NewsItem {
+  title: string;
+  author: string;
+}
 
 const CardsListContainer = styled.section`
   width: 100%;
@@ -12,9 +18,24 @@ const CardsListContainer = styled.section`
 `;
 
 const CardsList: React.FC = () => {
+  const [items, setItems] = useState<NewsItem[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('https://hn.algolia.com/api/v1/search?tags=front_page');
+      const data = await response.json();
+      setItems(data.hits.slice(0, 10));
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <CardsListContainer>
       <h2>Cards List</h2>
+      {items.map((item, index) => (
+        <Card key={index} name={item.author} subject={item.title} />
+      ))}
     </CardsListContainer>
   );
 };
