@@ -8,19 +8,6 @@ const AppContainer = styled.div`
   height: 100vh;
 `;
 
-const ContentContainer = styled.div`
-  display: flex;
-  flex-grow: 1;
-  padding: 20px;
-`;
-
-const MainContent = styled.main`
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-`;
-
 const App: React.FC = () => {
   return (
     <AppContainer>
