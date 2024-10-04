@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 interface CardProps {
   name: string;
   subject: string;
-  onRemove: () => void;  
+  onRemove: () => void;
 }
 
 const CardContainer = styled.div`
@@ -15,10 +15,11 @@ const CardContainer = styled.div`
   border-radius: 8px;
   position: relative;
   cursor: pointer;
-  transition: box-shadow 0.3s ease-in-out;
-  
+  transition: box-shadow 0.3s ease-in-out, transform 0.2s;
+
   &:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
   }
 `;
 

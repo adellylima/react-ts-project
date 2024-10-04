@@ -1,8 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import Sidebar from './components/Sidebar';
-import Footer from './components/Footer';
-import CardsList from './components/CardList';
+import React from "react";
+import styled from "styled-components";
+import PageLayout from "./components/PageLayout";
 
 const AppContainer = styled.div`
   display: flex;
@@ -26,13 +24,7 @@ const MainContent = styled.main`
 const App: React.FC = () => {
   return (
     <AppContainer>
-      <ContentContainer>
-        <Sidebar />
-        <MainContent>
-          <CardsList />
-        </MainContent>
-      </ContentContainer>
-      <Footer />
+      <PageLayout />
     </AppContainer>
   );
 };
