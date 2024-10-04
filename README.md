@@ -2,6 +2,10 @@
 
 This is a demonstrative project developed with React and TypeScript. It features a card list that fetches data from an external API and implements pagination for navigation through the results.
 
+## Project Access
+
+- Project URL: https://react-ts-example.netlify.app/
+
 ## Technologies Used
 
 - **React**: A library for building user interfaces.
